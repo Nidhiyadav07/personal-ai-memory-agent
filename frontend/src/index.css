@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+:root {
+  --ink: #1c2733; --muted: #66717f; --paper: #f6f7f9; --panel: #ffffff;
+  --rule: #dde1e7; --brand: #2d55d6; --hl: #ffe36e; --danger: #b3261e;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ink: #e7ebf0; --muted: #98a3b1; --paper: #14181d; --panel: #1b2128;
+    --rule: #2c343e; --brand: #7b9bff; --hl: #6b5a10; --danger: #ff8a80;
+  }
+}
+
+@theme inline {
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-paper: var(--paper);
+  --color-panel: var(--panel);
+  --color-rule: var(--rule);
+  --color-brand: var(--brand);
+  --color-hl: var(--hl);
+  --color-danger: var(--danger);
+  --font-sans: 'IBM Plex Sans', system-ui, sans-serif;
+  --font-serif: 'Source Serif 4', Georgia, serif;
+}
+
+html, body, #root { height: 100%; }
+body { @apply bg-paper text-ink font-sans; margin: 0; }
+:focus-visible { outline: 2px solid var(--brand); outline-offset: 2px; }
+@media (prefers-reduced-motion: reduce) { .animate-pulse { animation: none; } }

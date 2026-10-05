@@ -1,0 +1,13 @@
+fastapi
+uvicorn[standard]
+python-multipart
+python-dotenv
+pymongo
+qdrant-client
+pypdf
+langchain-huggingface
+langchain-text-splitters
+langchain-groq
+sentence-transformers
+bcrypt
+PyJWT
